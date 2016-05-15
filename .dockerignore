@@ -1,0 +1,16 @@
+*.md
+Dockerfile
+.dockerignore
+*/temp*
+*/*/temp*
+temp?
+*/.git*
+*/*/.git*
+.git?
+/image/exampleProject/target
+/image/exampleProject/bin
+/image/exampleProject/build
+/image/exampleProject/temp
+/image/exampleProject/tmp
+/image/exampleProject/out
+/image/exampleProject/classes
