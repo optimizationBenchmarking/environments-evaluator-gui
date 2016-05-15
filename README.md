@@ -18,9 +18,22 @@ You can run this image by using:
 
     docker run --rm -t -i -p 80:8080/tcp optimizationbenchmarking/evaluator-gui:<VERSION>
   
+You should replace `<VERSION>` with the version of the GUI you want to run. Simply leave it away to run the [`latest`](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/tags/) version of the container.
+  
 This will keep the container open and you can receive log data. If you do not care about the logged results, use
 
     docker run -t -d -p 80:8080/tcp optimizationbenchmarking/evaluator-gui:<VERSION>
+    
+When executing this command, docker will print some kind of key, a long sequence of numbers of letters:
+
+    docker run -t -d -p 80:8080/tcp optimizationbenchmarking/evaluator-gui
+    7a18dc0f674523795b700ba5c1a7671ed41e27d5fdfe431023f0cc20aed43921
+
+ You should copy this key (`7a18dc0f674523795b700ba5c1a7671ed41e27d5fdfe431023f0cc20aed43921`) somewhere. Once you want to shut down the container with `docker stop` and the key, e.g.,
+ 
+    docker stop 7a18dc0f674523795b700ba5c1a7671ed41e27d5fdfe431023f0cc20aed43921
+    
+In the section below we discuss how you configure the port at which the GUI should be accessible and where the data should be stored.
     
 ### 2.2. Configuration
 
