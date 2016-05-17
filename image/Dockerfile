@@ -4,7 +4,7 @@
 # This is the image of the graphical user interface of our
 # evaluator.
 # 
-FROM optimizationbenchmarking/evaluator-runtime
+FROM optimizationbenchmarking/evaluator-runtime:0.8.5
 MAINTAINER Thomas Weise <tweise@ustc.edu.cn>
 
 RUN export LANG=C.UTF-8 &&\
