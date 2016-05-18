@@ -42,7 +42,7 @@ as recommended in the official [Docker installation page](https://docs.docker.co
 
 After you have installed Docker, you can run this image by using:
 
-    docker run --rm -t -i -p 80:8080/tcp optimizationbenchmarking/evaluator-gui:<VERSION>
+    docker run -t -i -p 80:8080/tcp optimizationbenchmarking/evaluator-gui:<VERSION>
   
 You should replace `<VERSION>` with the version of the GUI you want to run. Simply leave it away to run the [`latest`](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/tags/) version of the container.
   
