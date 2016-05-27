@@ -18,8 +18,7 @@ RUN export LANG=C.UTF-8 &&\
     apt-get clean &&\
     apt-get autoclean -y &&\
     apt-get autoremove -y &&\
-    apt-get clean &&\
-    rm -rf /tmp/evaluator-gui-master /tmp/antWebInstallerLinux.sh &&\    
+    apt-get clean &&\ 
     rm -rf /tmp/* /var/tmp/* &&\
     rm -rf /var/lib/apt/lists/* &&\
     rm -f /etc/ssh/ssh_host_*
