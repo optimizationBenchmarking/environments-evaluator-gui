@@ -37,13 +37,10 @@ You can run this image by using `docker run`. The [Evaluator GUI](https://github
 
 If you do *not* yet have [Docker](http://www.docker.com/) installed under your System, you can pick one of the options below. Our software has only been tested under Linux:
 
-<ol>
-<li><em>Linux</em>: on your Linux system, you can run
-<pre>curl -fsSL https://get.docker.com/ | sh</pre>    
-as recommended in the official <a href="https://docs.docker.com/linux/step_one/">Docker installation page</a>.</li>
-<li><em>Windows</em>: <a href="https://docs.docker.com/windows/">https://docs.docker.com/windows/</a></li>
-<li><em>Mac OS X</em>: <a href="https://docs.docker.com/mac/">https://docs.docker.com/mac/</a></li>
-</ol>
+- *Linux*: on your Linux system, you can run `curl -fsSL https://get.docker.com/ | sh`, as recommended in the official [Docker installation page](https://docs.docker.com/linux/step_one/).
+- *Windows*: [https://docs.docker.com/windows/](https://docs.docker.com/windows/)
+- *Mac OS X*: [https://docs.docker.com/mac/](https://docs.docker.com/mac/)
+
 This will install Docker. 
 
 #### 2.1.1. Running the Image
