@@ -4,14 +4,14 @@
 # This is the image of the graphical user interface of our
 # evaluator.
 # 
-FROM optimizationbenchmarking/evaluator-runtime:0.8.5
+FROM optimizationbenchmarking/evaluator-runtime:0.8.6
 MAINTAINER Thomas Weise <tweise@ustc.edu.cn>
 
 RUN export LANG=C.UTF-8 &&\
     apt-get update &&\
     apt-get install -f -y wget &&\
     cd /usr/local/bin/ &&\
-    wget https://github.com/optimizationBenchmarking/evaluator-gui/releases/download/0.8.5/evaluatorGui.jar &&\
+    wget https://github.com/optimizationBenchmarking/evaluator-gui/releases/download/0.8.6/evaluatorGui.jar &&\
     chmod +x /usr/local/bin/evaluatorGui.jar &&\
     mkdir /data/ &&\
     apt-get purge -f -y wget &&\

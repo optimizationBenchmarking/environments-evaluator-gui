@@ -5,7 +5,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/optimizationbenchmarking/evaluator-gui.svg)](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/)
 [![Docker Stars](https://img.shields.io/docker/stars/optimizationbenchmarking/evaluator-gui.svg)](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/)
 
-The current version of this image is 0.8.5.
+The current version of this image is 0.8.6.
 
 ## 1. Components
 
@@ -34,11 +34,20 @@ You can run this image by using `docker run`. The [Evaluator GUI](https://github
 
 ### 2.1. Basics
 
-If you do *not* yet have Docker installed in your Linux system, you can run
+#### 2.1.0. Install Docker
 
-    curl -fsSL https://get.docker.com/ | sh
-    
-as recommended in the official [Docker installation page](https://docs.docker.com/linux/step_one/). This will install Docker. 
+If you do *not* yet have [Docker](http://www.docker.com/) installed under your System, you can pick one of the options below. Our software has only been tested under Linux:
+
+<ol>
+<li><em>Linux</em>: on your Linux system, you can run
+<pre>curl -fsSL https://get.docker.com/ | sh</pre>    
+as recommended in the official <a href="https://docs.docker.com/linux/step_one/">Docker installation page</a>.</li>
+<li><em>Windows</em>: <a href="https://docs.docker.com/windows/">https://docs.docker.com/windows/</a></li>
+<li><em>Mac OS X</em>: <a href="https://docs.docker.com/mac/">https://docs.docker.com/mac/</a></li>
+</ol>
+This will install Docker. 
+
+#### 2.1.1. Running the Image
 
 After you have installed Docker, you can run this image by using:
 
