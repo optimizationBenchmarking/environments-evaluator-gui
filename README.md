@@ -1,7 +1,6 @@
 # optimizationbenchmarking/evaluator-gui
 
 [![Image Layers and Size](https://imagelayers.io/badge/optimizationbenchmarking/evaluator-gui:latest.svg)](https://imagelayers.io/?images=optimizationbenchmarking%2Fevaluator-gui:latest)
-[![Image Layers](https://img.shields.io/imagelayers/layers/optimizationbenchmarking/evaluator-gui/latest.svg)](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/optimizationbenchmarking/evaluator-gui.svg)](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/)
 [![Docker Stars](https://img.shields.io/docker/stars/optimizationbenchmarking/evaluator-gui.svg)](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/)
 
