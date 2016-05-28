@@ -6,11 +6,19 @@
 
 The current version of this image is 0.8.6.
 
+## 0. Installing Docker
+
+Docker can be installed following the guidelines below:
+
+* for [Linux](https://docs.docker.com/linux/step_one/), you can run  `curl -fsSL https://get.docker.com/ | sh` on your command line and everything is done automatically (if you have `curl` installed, which is normally the case),
+* for [Windows](https://docs.docker.com/windows/step_one/)
+* for [Mac OS](https://docs.docker.com/mac/step_one/)
+
 ## 1. Components
 
 This environment allows you to run the evaluator gui as a dockerized application on your machine. It includes all the necessary software components which it mainly imports from the image [evaluator-runtime](https://hub.docker.com/r/optimizationbenchmarking/evaluator-runtime/), including:
 
-- [`evaluatorGui.jar`](https://github.com/optimizationBenchmarking/evaluator-gui/) [version 0.8.5](https://github.com/optimizationBenchmarking/evaluator-gui/releases/download/0.8.5/evaluatorGui.jar)
+- [`evaluatorGui.jar`](https://github.com/optimizationBenchmarking/evaluator-gui/) [version 0.8.6](https://github.com/optimizationBenchmarking/evaluator-gui/releases/download/0.8.6/evaluatorGui.jar)
 - [`Java 8 OpenJDK`](http://openjdk.java.net/projects/jdk8/)
 - [`TeX Live`](http://www.tug.org/texlive/)
 - [`ghostscript`](http://ghostscript.com/)
@@ -33,31 +41,21 @@ You can run this image by using `docker run`. The [Evaluator GUI](https://github
 
 ### 2.1. Basics
 
-#### 2.1.0. Install Docker
+If you have installed Docker, you can run this image by using:
 
-If you do *not* yet have [Docker](http://www.docker.com/) installed under your System, you can pick one of the options below. Our software has only been tested under Linux:
-
-- *Linux*: on your Linux system, you can run `curl -fsSL https://get.docker.com/ | sh`, as recommended in the official [Docker installation page](https://docs.docker.com/linux/step_one/).
-- *Windows*: [https://docs.docker.com/windows/](https://docs.docker.com/windows/)
-- *Mac OS X*: [https://docs.docker.com/mac/](https://docs.docker.com/mac/)
-
-This will install Docker. 
-
-#### 2.1.1. Running the Image
-
-After you have installed Docker, you can run this image by using:
-
-    docker run -t -i -p 80:8080/tcp optimizationbenchmarking/evaluator-gui:<VERSION>
+    docker run -t -i -p 9999:8080/tcp optimizationbenchmarking/evaluator-gui
   
-You should replace `<VERSION>` with the version of the GUI you want to run. Simply leave it away to run the [`latest`](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/tags/) version of the container.
+This runs the [`latest`](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/tags/) version of the evaluator GUI. You can access it by opening your browser, typing [http://localhost:9999](http://localhost:9999) into the address bar, and hitting return.
+
+When starting the image, you can also specify `optimizationbenchmarking/evaluator-gui:<VERSION>` where `<VERSION>` should be replaced with the version of the GUI you want to run.
   
 The above command will keep the container's console open and you can receive log data and close the program with `Ctrl-C`. If you do not care about the logged results and want to run the container in the background, use
 
-    docker run -t -d -p 80:8080/tcp optimizationbenchmarking/evaluator-gui:<VERSION>
+    docker run -t -d -p 9999:8080/tcp optimizationbenchmarking/evaluator-gui
     
 When executing this command, Docker will print some kind of key, a long sequence of numbers of letters, which *could* look like the following:
 
-    docker run -t -d -p 80:8080/tcp optimizationbenchmarking/evaluator-gui
+    docker run -t -d -p 9999:8080/tcp optimizationbenchmarking/evaluator-gui
     7a18dc0f674523795b700ba5c1a7671ed41e27d5fdfe431023f0cc20aed43921
 
 You should copy this key (in this example `7a18dc0f674523795b700ba5c1a7671ed41e27d5fdfe431023f0cc20aed43921`, but it could also be something else) somewhere. Once you want to shut down the container with `docker stop` and the key, e.g.,
@@ -74,8 +72,15 @@ There are two main configuration issues you can handle: ports and data volume.
 
 #### 2.2.1. Port
 
-The port through which you access the application is specified by the [`-p` parameter](http://docs.docker.com/engine/reference/run/#expose-incoming-ports) provided to Docker. The general form is `-p PORT:8080/tco`, where `PORT` should be replaced with the number of the port under which you want to access the GUI from the outside world. Usually (as in the examples under 2.1), we would pick port `80` or `8080` and, hence, specify  `-p 80:8080/tcp` or `-p 8080:8080/tcp`. If you specify `80` as port, you can directly browse to the GUI via [localhost](http://localhost). For port `8080`, you need to specify [localhost:8080](http://localhost:8080).
+The port through which you access the application is specified by the [`-p` parameter](http://docs.docker.com/engine/reference/run/#expose-incoming-ports) provided to Docker. The general form is `-p PORT:8080/tco`, where `PORT` should be replaced with the number of the port under which you want to access the GUI from the outside world. Often, we would pick port `80` or `8080` and, hence, specify  `-p 80:8080/tcp` or `-p 8080:8080/tcp`. If you specify `80` as port, you can directly browse to the GUI via [localhost](http://localhost). For port `8080`, you need to specify [localhost:8080](http://localhost:8080).
 
+These ports are recommended if you run the system as a server to be accessed from the network. However, they may be unavailable under certain conditions:
+
+- You already run a web server at port 80.
+- You already run an application server at port 8080.
+- You use Docker under Windows or Mac OS.
+
+In this case, it may be easier to stick with some obscure port, like the `9999` in our examples above.
 
 #### 2.2.2. Data
 
