@@ -26,7 +26,7 @@ If you have installed Docker, you can run this image by using:
   
 This runs the [`latest`](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/tags/) version of the evaluator GUI. You can access it with your browser at address
 
-- [http://localhost:9999](http://localhost:9999) under Linux or
+- [`http://localhost:9999`](http://localhost:9999) under Linux or
 - `http://<dockerIP>:9999` under Windows and Mac OS, where `dockerIP` is the IP address of your Docker container. This address is displayed when you run the container. You can also obtain it with the command `docker-machine ip default`.
 
 When starting the image, you can also specify `optimizationbenchmarking/evaluator-gui:<VERSION>` where `<VERSION>` should be replaced with the version of the GUI you want to run.
