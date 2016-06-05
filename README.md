@@ -16,11 +16,11 @@ Docker can be installed following the guidelines below:
 
 ## 2. Usage
 
-You can run this image by using `docker run`. The [Evaluator GUI](https://github.com/optimizationBenchmarking/evaluator-gui/) will then be started inside the container. This GUI is a web-based application, meaning that you can access it via your web browser. With your browser, you can then upload and download experimental data, install example data sets from the web, start evaluation processes, and download the generated reports as PDF, LaTeX sources, or HTML. In the following, we first discuss a  
+You can run this image by using `docker run` in a normal terminal (Linux), the *Docker Quickstart Terminal* (Mac OS), or the *Docker Toolbox Terminal* (Windows). The [Evaluator GUI](https://github.com/optimizationBenchmarking/evaluator-gui/) will then be started inside the container. This GUI is a web-based application, meaning that you can access it via your web browser. With your browser, you can then upload and download experimental data, install example data sets from the web, start evaluation processes, and download the generated reports as PDF, LaTeX sources, or HTML. In the following, we first discuss a  
 
 ### 2.1. Basics
 
-If you have installed Docker, you can run this image by using:
+If you have installed Docker, you can run this image by using the following command in a normal terminal (Linux), the *Docker Quickstart Terminal* (Mac OS), or the *Docker Toolbox Terminal* (Windows):
 
     docker run -t -i -p 9999:8080/tcp optimizationbenchmarking/evaluator-gui
   
