@@ -4,7 +4,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/optimizationbenchmarking/evaluator-gui.svg)](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/)
 [![Docker Stars](https://img.shields.io/docker/stars/optimizationbenchmarking/evaluator-gui.svg)](https://hub.docker.com/r/optimizationbenchmarking/evaluator-gui/)
 
-The current version of this image is 0.8.7.
+The current version of this image is 0.8.9.
 
 ## 1. Installing Docker
 
@@ -72,7 +72,7 @@ The GUI uses the data part `/data` inside the Docker container. This volume can 
 
 This environment allows you to run the evaluator GUI as a dockerized application on your machine. It includes all the necessary software components which it mainly imports from the image [evaluator-runtime](https://hub.docker.com/r/optimizationbenchmarking/evaluator-runtime/), including:
 
-- [`evaluatorGui.jar`](https://github.com/optimizationBenchmarking/evaluator-gui/) [version 0.8.7](https://github.com/optimizationBenchmarking/evaluator-gui/releases/download/0.8.7/evaluatorGui.jar)
+- [`evaluatorGui.jar`](https://github.com/optimizationBenchmarking/evaluator-gui/) [version 0.8.9](https://github.com/optimizationBenchmarking/evaluator-gui/releases/download/0.8.9/evaluatorGui.jar)
 - [`Java 8 OpenJDK`](http://openjdk.java.net/projects/jdk8/)
 - [`TeX Live`](http://www.tug.org/texlive/)
 - [`ghostscript`](http://ghostscript.com/)
